@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#1C1A22"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+
+
+        <!-- Title & Practical Info -->
+        <TextView
+            android:id="@+id/mainTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mainSubTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+
+            android:textColor="#B79CF5"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainTitleTextView" />
+
+        <!-- User Status / Credentials Display from Explicit Intent -->
+        <TextView
+            android:id="@+id/statusTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="#2D2A35"
+            android:padding="12dp"
+
+            android:textColor="#C5CAE9"
+            android:textSize="14sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainSubTitleTextView" />
+
+        <!-- Section Header: Implicit Intents -->
+        <TextView
+            android:id="@+id/implicitSectionHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            android:textColor="#FFB74D"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/statusTextView" />
+
+        <!-- 1. Web URL Row -->
+        <TextView
+            android:id="@+id/TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Web url:"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/implicitSectionHeader" />
+
+        <EditText
+            android:id="@+id/weburleditTextText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#B79CF5"
+            android:hint="Enter URL"
+            android:inputType="textUri"
+            android:text="https://www.google.com"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/TextView"
+            app:layout_constraintEnd_toStartOf="@id/weburlbutton"
+            app:layout_constraintStart_toEndOf="@id/TextView" />
+
+        <Button
+            android:id="@+id/weburlbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#B79CF5"
+            android:text="Browse"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@id/weburleditTextText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/weburleditTextText" />
+
+        <!-- 2. Phone No Row -->
+        <TextView
+            android:id="@+id/phonenotextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Phone No:"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weburleditTextText" />
+
+        <EditText
+            android:id="@+id/phonenoeditTextText2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#B79CF5"
+            android:hint="Enter phone number"
+            android:inputType="phone"
+            android:text="9898573586"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/phonenotextView"
+            app:layout_constraintEnd_toStartOf="@id/phonenobutton"
+            app:layout_constraintStart_toEndOf="@id/phonenotextView" />
+
+        <Button
+            android:id="@+id/phonenobutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#B79CF5"
+            android:text="Call"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@id/phonenoeditTextText2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/phonenoeditTextText2" />
+
+        <!-- 3. Call Log Row -->
+
+        <TextView
+            android:id="@+id/calllogtextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="36dp"
+            android:text="Call Log:"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phonenoeditTextText2" />
+
+        <Button
+            android:id="@+id/callogbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#B79CF5"
+            android:text="View Log"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@id/calllogtextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/calllogtextView" />
+
+        <!-- 4. Gallery Row -->
+        <TextView
+            android:id="@+id/galarrytextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Gallery:"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/callogbutton" />
+
+        <Button
+            android:id="@+id/gallarybutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#B79CF5"
+            android:text="Open"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@id/galarrytextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/galarrytextView" />
+
+        <!-- 5. Camera Row -->
+        <TextView
+            android:id="@+id/logintextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Camera:"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gallarybutton" />
+
+        <Button
+            android:id="@+id/camerabutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#B79CF5"
+            android:text="Capture"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@id/logintextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/logintextView" />
+
+        <!-- 6. Alarm Row -->
+        <TextView
+            android:id="@+id/cameratextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Alarm:"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/camerabutton" />
+
+        <Button
+            android:id="@+id/alarmbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#B79CF5"
+            android:text="Set"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@id/cameratextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cameratextView" />
+
+        <!-- Section Header: Explicit Intent -->
+        <TextView
+            android:id="@+id/explicitSectionHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+
+            android:textColor="#4CAF50"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/alarmbutton" />
+
+        <!-- 7. Login Activity (Explicit Intent) Row -->
+        <TextView
+            android:id="@+id/alarmtextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:text="Login Activity:"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/explicitSectionHeader" />
+
+        <Button
+            android:id="@+id/loginbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#B79CF5"
+            android:text="Open Login"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@id/alarmtextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/alarmtextView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
