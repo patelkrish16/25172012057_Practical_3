@@ -33,7 +33,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme._25172012050_Practical_3">
+        android:theme="@style/Theme._25172012057_Practical_3">
 
         <!-- LoginActivity - Initial screen with ID & Password demonstrating Explicit Intent -->
         <activity
